@@ -1,0 +1,15 @@
+@font-face{font-family: Y2K;
+    src: url(../fonts/y-1999-k-sans.otf);
+}
+
+@font-face{font-family: JetBrain;
+    src: url(../fonts/JetBrainsMono-Regular.ttf);
+}
+
+@font-face{font-family: Satoshi;
+    src: url(../fonts/Satoshi-Variable.ttf);
+}
+
+@font-face{font-family: Metropolis;
+    src: url(../fonts/Metropolis-Regular.ttf);
+}

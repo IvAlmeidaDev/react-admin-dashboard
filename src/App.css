@@ -1,3 +1,36 @@
+.app {
+  display: flex;
+  min-height: 40vh;
+}
+
+.mainContent {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+
+  padding: 2rem;
+}
+
+.Toastify__toast {
+  font-family: inherit;
+}
+
+.Toastify__close-button {
+  font-family: inherit;
+}
+
+.Toastify__toast-body {
+  font-family: inherit;
+}
+
+
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

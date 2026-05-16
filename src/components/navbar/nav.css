@@ -1,10 +1,4 @@
-@font-face{font-family: Y2K;
-    src: url(../fonts/y-1999-k-sans.otf);
-}
 
-@font-face{font-family: Metropolis;
-    src: url(../fonts/Metropolis-Regular.ttf);
-}
 
 .nav-container {
   position: fixed;
@@ -12,7 +6,7 @@
   width: 100%;
   background-color: #101c3fbd;
   color: white;
-  z-index: 1000;
+  z-index: 900;
 }
 
 .nav-header {
