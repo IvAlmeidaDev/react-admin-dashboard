@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     gap: 20;
-    
+    font-family: 'Rubik';
     justify-content: center;
     align-items: center;
     
@@ -33,6 +33,7 @@
   color: rgb(246, 254, 255);
   
   font-size: 22px;
+  font-family: 'Satoshi';
   letter-spacing: 4px;
   text-align: center;
   background-color:  #081f5e;
