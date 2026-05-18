@@ -36,7 +36,7 @@
   font-family: 'Satoshi';
   letter-spacing: 4px;
   text-align: center;
-  background-color:  #081f5e;
+  background-color: #101c3f;
   text-decoration: none;
   margin-top: 20px;
   padding: 10px 20px;
@@ -46,6 +46,6 @@
 }
 
 .link-button:hover {
-  background-color: #344f97;
+  background-color: #1c2644;
 }
 

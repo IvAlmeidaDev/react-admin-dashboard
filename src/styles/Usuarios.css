@@ -1,63 +1,117 @@
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* GRID GENERAL */
 
 .boxPerfiles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-content: center;
-    gap: 25px; 
+  display: grid;
 
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
+  gap: 1.5rem;
+
+  padding: 2rem;
 }
 
-.listaPerfiles{
+/* CARD */
 
-    color: rgb(246, 254, 255);
-    font-family: 'metropolis', monospace;
-    letter-spacing: 3px;
-    background-color: rgba(12, 12, 95, 0.562);
-    width: 70vh;
-    height: 22vh;
-    border-radius: 15px;
-    margin-left: 10vh;
+.listaPerfiles {
+  background: rgba(12, 22, 48, 0.92);
 
-    display: flex;                /* 👉 activar flexbox */
-    flex-direction: column;       /* 👉 para que los hijos se apilen verticalmente */
-    justify-content: center;      /* 👉 centrar verticalmente */
-    align-items: center;          /* 👉 centrar horizontalmente */
-   
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 18px;
+
+  padding: 1.4rem;
+
+  min-height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  color: #f4f7ff;
+
+  font-family: 'metropolis', sans-serif;
+
+  overflow: hidden;
 }
 
+/* HOVER */
 
-h3 {
-  font-size: 28px;
-  font-weight: bolder;
-  text-align: center;
+.listaPerfiles:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(120, 160, 255, 0.25);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-h4 {
-  font-size: 22px;
-  font-weight: bolder;
-  text-align: center;
+/* NOMBRE */
+
+.listaPerfiles h3 {
+  font-size: 1.3rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  margin-bottom: 0.3rem;
+
+  color: #ffffff;
 }
+
+/* EMAIL */
+
+.listaPerfiles h4 {
+  font-size: 0.95rem;
+
+  font-weight: 400;
+
+  color: rgba(220, 228, 255, 0.72);
+
+  margin-bottom: 1rem;
+
+  word-break: break-word;
+}
+
+/* BOTÓN */
 
 .linkPerfil {
-  font-size: 20px;
-  background-color:  #081f5e;
-  color: rgb(246, 254, 255);
-  text-align: center;
+  align-self: flex-start;
+
   text-decoration: none;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  width: 16vw;
-  align-content: center;
+
+  background: #1b3b8f;
+
+  color: #ffffff;
+
+  padding: 0.75rem 1.2rem;
+
+  border-radius: 10px;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
+
+/* HOVER BOTÓN */
 
 .linkPerfil:hover {
-  background-color: #344f97;
-}
+  background: #2d56c5;
 
+  transform: translateY(-1px);
+}
