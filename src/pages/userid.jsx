@@ -43,25 +43,6 @@ export const DetallesId = () => {
             
             {/* Elementos del fondo animado */}
         <div class="background">
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
 </div>
             </div>
         )
@@ -75,13 +56,13 @@ export const DetallesId = () => {
         <h1 className="HeaderPerfil">Perfil:</h1>
         <img src={profilePlaceholder} className="profileImg"></img>
 
-        <ul>
-            <li>ID: {id}</li>
-            <li>Nombre: {usuario.nombre}</li>
-            <li>Correo: {usuario.email}</li>
+        <ul className="userDetailsBox">
+            <li className="userDetailItem">ID: {id}</li>
+            <li className="userDetailItem">Nombre: {usuario.nombre}</li>
+            <li className="userDetailItem">Correo: {usuario.email}</li>
             <li className="Fecha">Fecha de Registro <br/>
             :{usuario.fechaCreacion}</li>
-            <li>{usuario.activo ? 'Cuenta activa': 'Cuenta inactiva'}</li>
+            <li className="userDetailItem">{usuario.activo ? 'Cuenta activa': 'Cuenta inactiva'}</li>
         </ul>
 
         <div className="EditarYBorrar">
@@ -91,25 +72,6 @@ export const DetallesId = () => {
 
         {/* Elementos del fondo animado */}
         <div class="background">
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
 </div>
     </div>
     )
