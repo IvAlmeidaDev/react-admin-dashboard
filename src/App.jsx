@@ -9,6 +9,7 @@ import {Sidebar} from "./components/sidebar/sidebar.jsx"
 
 
 /*IMPORTAR PAGINAS */
+import { HomeCards } from "./pages/home.jsx"
 import { Error404 } from "./pages/error404"
 import { Inicio } from "./pages/Inicio"
 import {Usuarios} from "./pages/Usuarios"
@@ -37,7 +38,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route path='/' element={<Inicio />} />
+            <Route path='/' element={<HomeCards />} />
             <Route path='/registro' element={<Registro />} />
             <Route path='/usuarios' element={<Usuarios />} />
             <Route path='/usuario/:id' element={<DetallesId />} />

@@ -1,0 +1,70 @@
+.dashboardCards {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+
+    width: 100%;
+    padding: 30px;
+
+}
+
+.statCard {
+
+    background: rgba(8, 18, 50, 0.95);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 180px;
+
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.25);
+
+    transition: 0.25s ease;
+
+}
+
+.statCard:hover {
+
+    transform: translateY(-4px);
+
+    background: rgba(10, 24, 65, 1);
+
+}
+
+.statCard h3 {
+
+    color: #dfe7ff;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 18px;
+
+    font-family: 'metropolis', sans-serif;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+}
+
+.statCard p {
+
+    font-size: 3rem;
+
+    font-weight: bold;
+
+    color: #6ea8ff;
+
+    font-family: 'metropolis', sans-serif;
+
+}
