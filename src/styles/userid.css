@@ -10,6 +10,7 @@
   min-height: 100vh;
 
   padding: 3rem;
+  padding-bottom: 4rem;
 
   display: flex;
   flex-direction: column;
@@ -37,6 +38,8 @@
   font-size: 0.95rem;
 
   font-weight: 600;
+
+  position: relative;
 
   font-family: 'metropolis', sans-serif;
 
@@ -68,12 +71,12 @@
 /* IMAGEN PERFIL */
 
 .profileImg {
-  width: 140px;
-  height: 140px;
+  height: 120px;
+  width: 10px;
 
   object-fit: cover;
 
-  border-radius: 50%;
+  border-radius: 10%;
 
   border: 3px solid rgba(255,255,255,0.08);
 
