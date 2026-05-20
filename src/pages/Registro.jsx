@@ -26,6 +26,17 @@ export const Registro = () => {
 
     async function manejarEnvio(evento) {
         evento.preventDefault()
+        
+        if (
+            !User.nombre.trim() ||
+        !User.email.trim() ||
+        !User.contraseña.trim()
+        ) {
+
+    toast.error('No puedes dejar campos vacíos')
+
+    return
+    }
 
         try {
             const { error } = await supabase
@@ -71,6 +82,7 @@ export const Registro = () => {
                 <form className="RegistroForma" onSubmit={manejarEnvio}>
 
                     <input
+                        required
                         className="registro_input"
                         type='text'
                         placeholder="Nombre"
@@ -80,6 +92,7 @@ export const Registro = () => {
                     />
 
                     <input
+                        required
                         className="registro_input"
                         type='email'
                         placeholder="Correo"
@@ -89,6 +102,7 @@ export const Registro = () => {
                     />
 
                     <input
+                        required
                         className="registro_input"
                         type='password'
                         placeholder="Contraseña"
