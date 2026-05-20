@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { supabase } from '../supabaseClient';
 
 
 export const BotonEliminar = ({ id }) => {
+    
     const navigate = useNavigate();
 
     const manejarBorrar = async () => {
@@ -11,19 +13,24 @@ export const BotonEliminar = ({ id }) => {
         if (!confirmar) return;
 
         try {
-            const res = await fetch('https://datum-q26q.onrender.com/api/usuarios/'+id, {
-                method: "DELETE",
-            });
+            const { error } = await supabase
+                .from('usuarios')
+                .delete()
+                .eq('id', id);
 
-            if (!res.ok) throw new Error("Error al eliminar");
+            if (error) throw error;
 
             toast.error('Usuario Eliminado');
+
             navigate("/usuarios");
-        } catch (err) {
+        }
+
+        catch (err) {
             console.error(err);
             toast.error('No se pudo eliminar el usuario');
         }
     };
 
-    return <button onClick={manejarBorrar} className="back-button">Eliminar</button>;
+    return (
+        <button onClick={manejarBorrar} className="back-button">Eliminar</button>);
 };
