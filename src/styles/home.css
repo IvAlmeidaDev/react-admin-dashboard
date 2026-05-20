@@ -63,8 +63,26 @@
 
     font-weight: bold;
 
+    font-family: 'metropolis', sans-serif;
+
+}
+
+/*Diferentes colores para las cards */ 
+
+.UsuariosTotales {
+
     color: #6ea8ff;
 
-    font-family: 'metropolis', sans-serif;
+}
+
+.UsuariosActivos {
+
+    color: #4caf50;
+
+}
+
+.UsuariosInactivos {
+
+    color: #f44336;
 
 }

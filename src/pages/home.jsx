@@ -51,17 +51,17 @@ export const HomeCards = () => {
 
             <div className="statCard">
                 <h3>Total Usuarios</h3>
-                <p>{stats.total}</p>
+                <p className="UsuariosTotales">{stats.total}</p>
             </div>
 
             <div className="statCard">
                 <h3>Usuarios Activos</h3>
-                <p>{stats.activos}</p>
+                <p className="UsuariosActivos">{stats.activos}</p>
             </div>
 
             <div className="statCard">
                 <h3>Usuarios Inactivos</h3>
-                <p>{stats.inactivos}</p>
+                <p className="UsuariosInactivos">{stats.inactivos}</p>
             </div>
 
                         {/* Elementos del fondo animado */}
