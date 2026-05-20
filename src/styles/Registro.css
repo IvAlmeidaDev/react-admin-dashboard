@@ -1,71 +1,213 @@
-
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* CONTENEDOR GENERAL */
+
+body {
+  background-color: #0b1120;
+}
+
+/* WRAPPER PRINCIPAL */
 
 .RegistroBox {
-    display: flex;
-    flex-direction: column;
-    gap: 20;
-    justify-content: center;
-    align-items: center;
-    
 
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
 }
+
+/* CARD FORMULARIO */
+
+.RegistroForma {
+
+  width: 100%;
+  max-width: 460px;
+
+  background: rgba(12, 22, 48, 0.92);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  border-radius: 20px;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.25);
+}
+
+/* HEADER */
 
 .registro_header {
-    font-size:  70px;
-    font-weight: bolder;
-    color: #081f5e;
-    
-        margin-left: 2%;
-        margin-bottom: 3%;
+
+  font-size: 2.5rem;
+
+  color: #ffffff;
+
+  font-family: 'metropolis', sans-serif;
+
+  font-weight: 700;
+
+  margin-bottom: 1.5rem;
+
+  letter-spacing: 1px;
+
+  text-align: center;
 }
 
+/* INPUTS */
 
-.RegistroForma{
-    display: flex;
-    flex-direction: column;
+.registro_input {
+
+  width: 100%;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 12px;
+
+  padding: 1rem;
+
+  color: #f4f7ff;
+
+  font-size: 1rem;
+
+  font-family: 'metropolis', sans-serif;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-input{
-    font-size: 20px;
-    text-align: center;
-    color: rgb(20, 19, 48);
-    
-    font-weight: bold;
-    background-color: #101c3fbd;
-    height: 5vh;
-    margin-top: 4%;
-    border-radius: 8px;
-    box-shadow: none;
-    outline: none;
-    border: none;
+/* PLACEHOLDER */
+
+.registro_input::placeholder {
+  color: rgba(220,228,255,0.45);
 }
 
-.registro_input{
-  margin-left: 0%;
+/* FOCUS */
+
+.registro_input:focus {
+
+  border-color: rgba(110,168,255,0.5);
+
+  background: rgba(255,255,255,0.06);
+
+  transform: translateY(-1px);
 }
 
-.BotonEnviar{
-    font-size: 27px;
-    text-align: center;
-    color: rgb(246, 254, 255);
-    
-    font-weight: bolder;
-    letter-spacing: 3px;
-    background-color: #101c3fbd;
-    height: 10vh;
-    margin-top: 15%;
-    border-radius: 8px;
-    box-shadow: none;
-    outline: none;
-    border: none;
+/* BOTÓN */
+
+.BotonEnviar {
+
+  margin-top: 0.5rem;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #1b3b8f;
+
+  color: white;
+
+  padding: 1rem;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  font-family: 'metropolis', sans-serif;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
+
+/* HOVER */
 
 .BotonEnviar:hover {
-  background-color:  #1c2644;
+
+  background: #2d56c5;
+
+  transform: translateY(-1px);
 }
 
+/* BOTÓN VOLVER */
+
+.back-button {
+
+  position: absolute;
+
+  top: 2rem;
+  left: 2rem;
+
+  text-decoration: none;
+
+  background: #1b3b8f;
+
+  color: #ffffff;
+
+  padding: 0.75rem 1.2rem;
+
+  border-radius: 10px;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  font-family: 'metropolis', sans-serif;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-button:hover {
+
+  background: #2d56c5;
+
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .RegistroBox {
+    padding: 1.5rem;
+  }
+
+  .RegistroForma {
+    padding: 1.5rem;
+  }
+
+  .registro_header {
+    font-size: 2rem;
+  }
+
+  .back-button {
+
+    top: 1rem;
+    left: 1rem;
+  }
+
+}
