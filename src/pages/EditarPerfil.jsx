@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { useEffect , useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router"
+import { supabase } from '../supabaseClient';
 
 import '../styles/Editar.css'
 
@@ -21,26 +22,44 @@ export const Editar = () =>{
         const {name, value} = evento.target
         setUsuario((prev) => ({
             ...prev,
-            [name]: value
+            [name]:
+            name === 'activo' 
+            ? value === 'true' 
+            : value
         }))
     }
 
     async function manejarEnvio(evento) {
         evento.preventDefault()
         
+
+        // Validación para que los campos no puedan quedar vacios//
+        if (!usuario.nombre.trim() || !usuario.email.trim() || !usuario.contraseña.trim()) {
+            toast.error('Por favor, completa todos los campos');
+            return;
+        }
+
+        //Cambiar los datos de la BD//
         try {
-            await fetch(
-                'https://datum-q26q.onrender.com/api/usuarios/'+ id,
-                {
-                    method: 'PUT',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify(usuario)
-                }
-            )
+            const{error} = await supabase
+            .from('usuarios')
+            .update({
+                nombre: usuario.nombre,
+                email: usuario.email,
+                activo: usuario.activo,
+                contraseña: usuario.contraseña,
+            })
+            .eq('id', id)
+
+            if (error) throw error
+
+            toast.success('Perfil actualizado correctamente')
+            navigate('/usuario/' + id)
         }
         
         catch (err){
             console.log(err)
+            toast.error('Error al actualizar usuario')
         }
         
         finally{
@@ -57,9 +76,15 @@ export const Editar = () =>{
     useEffect(() => {
         const obtenerPerfilId = async () => {
             try {
-                const res = await fetch ('https://datum-q26q.onrender.com/api/usuarios/' + id)
-                const data = await res.json ()
-                setUsuario(data.datos)
+                const { data, error } = await supabase
+                .from ('usuarios') /*Selecciona la tabla usuarios */ 
+                .select('*') /*Seleccionar todos los campos*/
+                .eq('id', id) /*Busca la fila con el id especificado*/
+                .single() /*Traer el array como un solo objeto*/
+
+                if (error) throw error
+
+                setUsuario(data)
             }
 
             catch (err) {
@@ -79,31 +104,13 @@ export const Editar = () =>{
     <h1 className="UserBox">Cargando...</h1>
     {/* Elementos del fondo animado */}
         <div class="background">
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-</div>
+
+        </div>
 
     return(
         <div className="UserBox">
             
-            <Link to="/usuarios" className="back-button"> Volver</Link>
+            <Link to={`/usuario/${id}`} className="back-button"> Volver</Link>
 
             <h1 className="edit_header">Editar Perfil</h1>
         
