@@ -4,7 +4,7 @@
   width: 18%;
   min-height: 100%;
 
-  background: #0b1133e8;
+  background: #09101f;
 
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
 
 /* Botones/links */
 
-.sidebar_nav a {
+.sidebar_button {
   display: flex;
 
   padding: 1rem;
@@ -63,11 +63,31 @@
   transition:
     background-color 0.2s,
     transform 0.2s;
+  
+  background: rgba(8, 18, 50, 0.95);
+
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
 /* Hover */
 
-.sidebar_nav a:hover {
+.sidebar_button:hover {
 
   transform: translateX(6px);
+
+    border-color: rgba(110,168,255,0.35);
+
+  color: white;
+
+  transform: translateX(4px);
+}
+
+.sidebar_button.active {
+
+  background: #2449b8;
+
+  border-color: rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 4px 14px rgba(36, 73, 184, 0.35);
 }

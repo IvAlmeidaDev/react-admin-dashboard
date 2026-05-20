@@ -12,16 +12,16 @@ export const Sidebar = () => {
       <nav className="sidebar_nav">
         <ul>
 
-          <li className="sidebar_button">
-            <a href="/">Inicio</a>
+          <li>
+            <a className="sidebar_button" href="/">Inicio</a>
           </li>
 
-          <li className="sidebar_button">
-            <a href="/usuarios">Usuarios</a>
+          <li>
+            <a className="sidebar_button" href="/usuarios">Usuarios</a>
           </li>
 
-          <li className="sidebar_button">
-            <a href="/registro">Crear Usuario</a>
+          <li>
+            <a className="sidebar_button" href="/registro">Crear Usuario</a>
           </li>
 
         </ul>
