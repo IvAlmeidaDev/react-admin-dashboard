@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import { useEffect , useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router"
 
 import '../styles/Editar.css'
 
@@ -101,6 +102,9 @@ export const Editar = () =>{
 
     return(
         <div className="UserBox">
+            
+            <Link to="/usuarios" className="back-button"> Volver</Link>
+
             <h1 className="edit_header">Editar Perfil</h1>
         
             <form className="edit_form" onSubmit={manejarEnvio}>
@@ -146,26 +150,7 @@ export const Editar = () =>{
         
         {/* Elementos del fondo animado */}
         <div class="background">
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-</div>
+        </div>
 
         </div>
     )
