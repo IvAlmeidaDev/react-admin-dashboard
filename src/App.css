@@ -34,10 +34,8 @@ main {
 
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .logo {
@@ -74,4 +72,12 @@ main {
 
 .read-the-docs {
   color: #888;
+}
+
+/* Media query para vista móvil */
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+  }
 }

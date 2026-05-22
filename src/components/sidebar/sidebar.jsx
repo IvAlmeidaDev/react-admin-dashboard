@@ -1,12 +1,13 @@
 import { Link } from "react-router";
 import './sidebar.css'
+import logo from '../../assets/Vitejs-logo.svg'
 
 export const Sidebar = () => {
     return (
             <aside className="sidebar">
 
       <div className="sidebar_logo">
-        <h2>Mi Sitio</h2>
+        <img src={logo} alt="Logo"></img>
       </div>
 
       <nav className="sidebar_nav">

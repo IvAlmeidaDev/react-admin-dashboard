@@ -22,12 +22,12 @@
 /* Logo o título */
 
 .sidebar_logo {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
-.sidebar_logo h2 {
-  color: white;
-  font-size: 2rem;
+.sidebar_logo img {
+  width: 68px;
 }
 
 /* Navegación */
@@ -90,4 +90,13 @@
 
   box-shadow:
     0 4px 14px rgba(36, 73, 184, 0.35);
+}
+
+/* Media query para vista móvil */
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+    flex: 0;
+  }
 }

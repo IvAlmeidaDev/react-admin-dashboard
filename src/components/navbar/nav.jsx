@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import './nav.css'
+import logo_top from '../../assets/Vitejs-logo.svg'
 
 export const Nav = () => {
     const [menuAbierto, setMenuAbierto] = useState(false);
@@ -12,7 +13,7 @@ export const Nav = () => {
     return (
         <nav className="nav-container">
             <div className="nav-header">
-                <h2>Mi Sitio</h2>
+                <img className="nav-logo" src={logo_top} alt="Logo"></img>
                 <button className="hamburger" onClick={toggleMenu}>
                 ☰
         </button>
