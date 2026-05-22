@@ -1,17 +1,109 @@
-/* Estilo del fondo animado */
-@keyframes move {
-    100% {
-        transform: translate3d(0, 0, 1px) rotate(360deg);
-    }
+/* =========================
+   ANIMATED BACKGROUND
+========================= */
+
+@keyframes backgroundFloat {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-2%, -1%) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(2%, 2%) rotate(-1deg);
+  }
+
+  75% {
+    transform: translate(-1%, 1%) rotate(0.5deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
 }
 
 .background {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: #0b1120;
-    overflow: hidden;
-    z-index: -30;
+  position: fixed;
+
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  z-index: -30;
+
+  /* Fondo MUCHO más oscuro y neutro */
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 180, 255, 0.08),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 255, 200, 0.068),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      180deg,
+      #020817 0%,
+      #030712 45%,
+      #020617 100%
+    );
+}
+
+/* Glow animado */
+
+.background::before {
+  content: "";
+
+  position: absolute;
+
+  width: 140%;
+  height: 140%;
+
+  top: -20%;
+  left: -20%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(125, 131, 218, 0.11) 0%,
+      transparent 40%
+    );
+
+  animation: backgroundFloat 22s ease-in-out infinite;
+
+  filter: blur(30px);
+
+  will-change: transform;
+}
+
+/* Textura sutil */
+
+.background::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.025;
+
+  background-image:
+    repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      rgba(255, 255, 255, 0.7) 1px,
+      transparent 2px
+    );
+
+  background-size: 4px 4px;
 }

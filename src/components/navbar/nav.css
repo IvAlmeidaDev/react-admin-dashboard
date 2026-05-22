@@ -7,6 +7,7 @@
   background-color: #101c3fbd;
   color: white;
   z-index: 900;
+  height: 50px;
 }
 
 .nav-header {
@@ -69,6 +70,10 @@
 
 @media (max-width: 768px) {
 
+  .nav-container {
+    height: auto;
+  }
+  
   .nav-header{
     padding: 0.5rem;
   }
