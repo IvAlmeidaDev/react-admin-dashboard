@@ -16,8 +16,6 @@
   flex-direction: column;
 
   gap: 1.5rem;
-
-  background-color: #0b1120;
 }
 
 /* BOTÓN VOLVER */
@@ -46,6 +44,8 @@
   transition:
     background-color 0.2s ease,
     transform 0.2s ease;
+  
+  margin-bottom: 2rem;
 }
 
 .back-button:hover {
